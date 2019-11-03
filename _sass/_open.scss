@@ -1,0 +1,86 @@
+* {
+    font-family: 'Montserrat';
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/assets/img/bg-line.png");
+    background-repeat: repeat-y;
+    background-size: initial;
+}
+
+#home {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    #logo {
+        width: 25%;
+    }
+
+    #infos {
+        margin-top: 1rem;
+        display: grid;
+        grid-template-columns: 2rem auto;
+        grid-template-rows: 1fr 1fr;
+        column-gap: .3rem;
+        row-gap: .3rem;
+        align-items: center;
+
+        * {
+            color: $dark-blue;
+        }
+        
+        .icon {
+            grid-column: 1;
+            text-align: center;
+            font-size: 1.3rem;
+            
+            &:first-of-type {
+                grid-row: 1;
+            }
+            
+            &:last-of-type {
+                grid-row: 2;
+            }
+        }
+        
+        .text {
+            grid-column: 2;
+            font-size: 1.5rem;
+            
+            &:first-of-type {
+                grid-row: 1;
+            }
+
+            &:last-of-type {
+                grid-row: 2;
+            }
+        }
+    }
+
+    .button {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: black;
+        padding: .5rem .8rem;
+        background-color: $yellow;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+}
